@@ -1,0 +1,7 @@
+name: Hello Example
+type: module
+description: An example outlining how a module can define blocks.
+package: Traning
+core: 8.x
+dependencies:
+  - block

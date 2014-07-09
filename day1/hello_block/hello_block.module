@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * 
+ */
+
+/**
+ * Implements hook_permission().
+ *
+ */
+function hello_block_permission() {
+  return array(
+    'access simple page' => array(
+      'title' => t('Access simple page'),
+      'description' => t('Allow users to access simple page'),
+    ),
+  );
+}
+//end

@@ -1,0 +1,14 @@
+hello_block.description:
+  path: 'hello-block'
+  defaults:
+    _content: '\Drupal\hello_block\Controller\HelloBlockController::description'
+    _title: 'Hello Block Description'
+  requirements:
+    _access: 'TRUE'
+hello_block:
+  path: 'hello-block/todo'
+  defaults:
+    _content: '\Drupal\hello_block\Controller\HelloBlockController::todo'
+    _title: 'Hello Block Todo'
+  requirements:
+    _permission: 'access simple page'
