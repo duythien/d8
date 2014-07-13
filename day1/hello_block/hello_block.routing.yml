@@ -5,7 +5,7 @@ hello_block.description:
     _title: 'Hello Block Description'
   requirements:
     _access: 'TRUE'
-hello_block:
+hello_block.todo:
   path: 'hello-block/todo'
   defaults:
     _content: '\Drupal\hello_block\Controller\HelloBlockController::todo'
@@ -13,10 +13,28 @@ hello_block:
   requirements:
     _permission: 'access simple page'
 
-hello_block:
+hello_block.form:
   path: 'hello-block/form'
   defaults:
     _form: '\Drupal\hello_block\Form\HelloGetFormPage'
     _title: 'Hello Form'
   requirements:
     _permission: 'TRUE'
+
+hello_block.user:
+  path: 'hello-block/{user}'
+  defaults:
+    _content: '\Drupal\hello_block\Controller\HelloBlockController::userAction'
+    _title: 'Hello Form'
+  requirements:
+    _permission: 'TRUE'
+
+# Change record: https://www.drupal.org/node/2056839
+hello_block.entityView:
+    path: '/hello-block-entity-view/{user}'
+    defaults:
+        _title: Hello Entity View
+        _entity_view: 'user.default'
+    requirements:
+        _permission: 'access content'
+
