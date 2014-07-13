@@ -12,3 +12,11 @@ hello_block:
     _title: 'Hello Block Todo'
   requirements:
     _permission: 'access simple page'
+
+hello_block:
+  path: 'hello-block/form'
+  defaults:
+    _form: '\Drupal\hello_block\Form\HelloGetFormPage'
+    _title: 'Hello Form'
+  requirements:
+    _permission: 'TRUE'
