@@ -22,6 +22,17 @@ hello_block.callback_argument:
   requirements:
     _access: 'TRUE'
 
+hello_block.controller:
+  path: 'hello-block/controller'
+  defaults:
+  # Because this route does not return HTML, use _controller.
+    _controller: '\Drupal\hello_block\Controller\HelloBlockController::controllerAction'
+    _title: 'Hello Controller'
+  options:
+    _access_mode: 'ALL'
+  requirements:
+    _permission: 'TRUE'
+
 hello_block.todo:
   path: 'hello-block/todo'
   defaults:

@@ -42,5 +42,12 @@ class HelloBlockController {
   	var_dump($user);
   	
   }
+  public function controllerAction(){
+  	$data[] = array(
+      'id' => 1,
+      'name' => 'Drupal 8',
+    );
+  	echo json_encode($data);
+  }
 
 }
