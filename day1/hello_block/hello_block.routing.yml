@@ -14,6 +14,14 @@ hello_block.simple_callback:
   requirements:
     _access: 'TRUE'
 
+hello_block.callback_argument:
+  path: 'hello-block/callback-argument/{a1}/{a2}'
+  defaults:
+    _title: Callback with arguments
+    _content: '\Drupal\hello_block\Controller\SimpleCallback::callbackArgumentAction'
+  requirements:
+    _access: 'TRUE'
+
 hello_block.todo:
   path: 'hello-block/todo'
   defaults:

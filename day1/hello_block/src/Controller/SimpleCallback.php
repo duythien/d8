@@ -17,6 +17,13 @@ class SimpleCallback extends ControllerBase
             '#markup' => 'hello_block Simple Callback!'
         ];
     }
+    public function callbackArgumentAction($a1,$a2 = 'Vietnam'){
+        return [
+            '#prefix' => '<pre>',
+            '#markup' => print_r([$a1, $a2], true),
+            '#suffix' => '</pre>',
+        ];
+    }
 
 }
 //
