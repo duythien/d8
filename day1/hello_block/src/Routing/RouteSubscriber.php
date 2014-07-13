@@ -22,6 +22,7 @@ class RouteSubscriber extends RouteSubscriberBase {
     // Note that the second parameter of setRequirement() is a string.
     if ($route = $collection->get('user.logout')) {
       $route->setRequirement('_access', 'FALSE');
+      //drupal_set_message(t('message'), 'status', FALSE);
     }
   }
 }

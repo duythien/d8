@@ -7,6 +7,9 @@
 
 namespace Drupal\hello_block\Controller;
 
+use Drupal\Core\Session\AccountInterface;
+use Symfony\Component\HttpFoundation\Request;
+
 /**
  * Controller routines for hello block routes.
  */
@@ -31,6 +34,13 @@ class HelloBlockController {
     );
 
     return $build;
+  }
+  /**
+   * Using parameters in routes 
+   */
+  public function userAction(AccountInterface $user, Request $request){
+  	var_dump($user);
+  	
   }
 
 }
