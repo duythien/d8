@@ -5,6 +5,15 @@ hello_block.description:
     _title: 'Hello Block Description'
   requirements:
     _access: 'TRUE'
+
+hello_block.simple_callback:
+  path: 'hello-block/simple-callback'
+  defaults:
+    _title: Very simple callback
+    _content: '\Drupal\hello_block\Controller\SimpleCallback::noArgumentAction'
+  requirements:
+    _access: 'TRUE'
+
 hello_block.todo:
   path: 'hello-block/todo'
   defaults:
