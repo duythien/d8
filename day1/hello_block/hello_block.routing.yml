@@ -33,18 +33,18 @@ hello_block.controller:
   requirements:
     _permission: 'TRUE'
 
-hello_block.todo:
-  path: 'hello-block/todo'
-  defaults:
-    _content: '\Drupal\hello_block\Controller\HelloBlockController::todo'
-    _title: 'Hello Block Todo'
-  requirements:
-    _permission: 'access simple page'
-
 hello_block.form:
   path: 'hello-block/form'
   defaults:
     _form: '\Drupal\hello_block\Form\HelloGetFormPage'
+    _title: 'Hello Form'
+  requirements:
+    _permission: 'TRUE'
+#Get LANGUESEGE
+hello_block.languese:
+  path: 'hello-block/language'
+  defaults:
+    _form: '\Drupal\hello_block\Form\LangugeForm'
     _title: 'Hello Form'
   requirements:
     _permission: 'TRUE'
@@ -65,4 +65,16 @@ hello_block.entityView:
         _entity_view: 'user.default'
     requirements:
         _permission: 'access content'
+
+hello_block.todo:
+  path: 'hello-block/todo'
+  defaults:
+    _content: '\Drupal\hello_block\Controller\HelloBlockController::todo'
+    _title: 'Hello Block Todo'
+  requirements:
+    _permission: 'access simple page'
+
+#Dynamic routes
+route_callbacks:
+  - '\Drupal\hello_block\Routing\ExampleRoutes::routes'
 

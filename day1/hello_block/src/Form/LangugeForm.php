@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Contains \Drupal\hello_block\Form\HelloGetFormPage.
+ * Contains \Drupal\hello_block\Form\LangugeForm.
  */
 
 namespace Drupal\hello_block\Form;
@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormInterface;
 /**
  * File test form class.
  */
-class HelloGetFormPage implements FormInterface {
+class LangugeForm implements FormInterface {
 
   /**
    * Returns a unique string identifying the form.
@@ -38,16 +38,12 @@ class HelloGetFormPage implements FormInterface {
     $form['intro'] = array(
       '#markup' => t('Use this form to send a message to an e-mail address. No spamming!'),
     );
-    $form['email'] = array(
+    $form['ip'] = array(
       '#type' => 'textfield',
-      '#title' => t('E-mail address'),
+      '#title' => t('IP address'),
       '#required' => TRUE,
     );
-    /*$form['message'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Message'),
-      '#required' => TRUE,
-    );*/
+    
     $form['submit'] = array(
       '#type' => 'submit',
       '#value' => t('Submit'),
@@ -78,6 +74,7 @@ class HelloGetFormPage implements FormInterface {
    *   An associative array containing the current state of the form.
    */
   public function submitForm(array &$form, array &$form_state) {
-    hello_block_mail_send($form_state['values']);
+    //hello_block_mail_send($form_state['values']);
+    dms($form);
   }
 }

@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * Contains \Drupal\hello_block\Form\HelloGetFormPage.
+ * Contains \Drupal\email_example\Form\EmailExampleGetFormPage.
  */
 
-namespace Drupal\hello_block\Form;
+namespace Drupal\email_example\Form;
 
 use Drupal\Core\Form\FormInterface;
 
 /**
  * File test form class.
  */
-class HelloGetFormPage implements FormInterface {
+class EmailExampleGetFormPage implements FormInterface {
 
   /**
    * Returns a unique string identifying the form.
@@ -20,7 +20,7 @@ class HelloGetFormPage implements FormInterface {
    *   The unique string identifying the form.
    */
   public function getFormID() {
-    return 'hello_block';
+    return 'email_example';
   }
 
   /**
@@ -43,11 +43,11 @@ class HelloGetFormPage implements FormInterface {
       '#title' => t('E-mail address'),
       '#required' => TRUE,
     );
-    /*$form['message'] = array(
+    $form['message'] = array(
       '#type' => 'textarea',
       '#title' => t('Message'),
       '#required' => TRUE,
-    );*/
+    );
     $form['submit'] = array(
       '#type' => 'submit',
       '#value' => t('Submit'),
@@ -78,6 +78,6 @@ class HelloGetFormPage implements FormInterface {
    *   An associative array containing the current state of the form.
    */
   public function submitForm(array &$form, array &$form_state) {
-    hello_block_mail_send($form_state['values']);
+    email_example_mail_send($form_state['values']);
   }
 }

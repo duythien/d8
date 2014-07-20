@@ -35,6 +35,17 @@ class HelloBlockController {
 
     return $build;
   }
+
+  /**
+   * A simple controller method to explain what the block example is about.
+   */
+  public function contentAction() {
+    $build = array(
+      '#markup' => t('My Content'),
+    );
+
+    return $build;
+  }
   /**
    * Using parameters in routes 
    */
